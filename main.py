@@ -14,7 +14,11 @@ engine.say("Привет, я голосовой ассистент! Если х�
 engine.runAndWait()
 
 if input().lower() == 'хочу':
-    engine.say()
+    abil = open('abilities.txt', 'r', encoding='utf8')
+    info = abil.read()
+    engine.say(info)
+
+    engine.runAndWait()
 
 
 choice = input('1: Прочитать текст из файла \n'
